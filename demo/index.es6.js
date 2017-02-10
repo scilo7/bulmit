@@ -6,7 +6,7 @@ const DataState = {
     loading: false,
     page: null,
 
-    add: (evt) => {
+    add: () => {
         
         DataState.count += 1
         DataState.loading = true
@@ -101,7 +101,7 @@ const DemoImage = {
 
 const DemoNotification = {
     view: () => m(bm.Notification, {
-            state: 'danger', 'delete': true, onclick: (e) => console.log('click')}, 
+            state: 'danger', 'delete': true, onclick: () => console.log('click')}, 
             'What the hell !'),
 
 }
@@ -122,7 +122,7 @@ const DemoTag = {
 }
 
 const DemoTitle = {
-    view: () => [1, 2, 3, 4].map(x => [
+    view: () => [1, 2, 3, 4, 5, 6].map(x => [
         m(bm.Title, {size: x}, 'Title ' + x),
         m(bm.SubTitle, {size: x}, 'SubTitle ' + x),
     ])
@@ -155,12 +155,13 @@ const DemoMenu = {
     view: () =>
         m(bm.Menu, {
             selected: 'myt',
+            collapsable: true,
             items: [
                 {
                     label: 'Administration',
                     items: [
                         { key: 'ts', label:'Team Settings' },
-                        { key: 'myt', url: '/', label: 'Manage Your Team', items: [
+                        { key: 'myt', label: 'Manage Your Team', items: [
                             { key: 'myt1', url: '/', label: 'Members' },
                             { key: 'myt2', onclick: () => console.log('onclick !!'), label: 'Add member' }
                         ]}
@@ -270,8 +271,9 @@ const Components = {
 
 
 const Menu = {
-    view: vnode => m(bm.Menu, {
+    view: () => m(bm.Menu, {
         selected: DataState.page,
+        collapsable: true,
         items: [
             {
                 label: 'Demos',
@@ -304,7 +306,7 @@ const get_demo = () => {
 }
 
 export const App = {
-    view: vnode => 
+    view: () => 
         m('.container',
             m(bm.Title, 'Bulmit'),
             m(".columns.is-mobile", 
