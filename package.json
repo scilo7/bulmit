@@ -1,0 +1,30 @@
+{
+  "name": "bulmit",
+  "version": "0.0.1",
+  "description": "Bulma components for Mithril",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "rollup -c --config rollup/rollup.config.prod.js",
+    "dev": "rollup -c --watch --config rollup/rollup.config.dev.js",
+    "demo": "rollup -c  --watch --config rollup/rollup.config.demo.js"
+  },
+  "author": "scilo7",
+  "license": "MIT",
+  "devDependencies": {
+    "buble": "^0.14.2",
+    "mocha": "^3.2.0",
+    "rollup": "^0.36.4",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-livereload": "^0.4.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-scss": "^0.1.0",
+    "rollup-plugin-serve": "^0.1.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2"
+  },
+  "dependencies": {
+    "mithril": "^1.0.0"
+  }
+}
