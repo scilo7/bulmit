@@ -15,5 +15,5 @@ export default {
     // resolve({browser: true, main: true}),
     commonjs()
   ],
-  external: 'mithril'
+  external: ['mithril']
 }

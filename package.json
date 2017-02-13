@@ -7,6 +7,7 @@
     "test": "mocha",
     "build": "rollup -c --config rollup/rollup.config.prod.js",
     "dev": "rollup -c --watch --config rollup/rollup.config.dev.js",
+    "doc": "rollup -c --watch --config rollup/rollup.config.doc.js",
     "demo": "rollup -c  --watch --config rollup/rollup.config.demo.js"
   },
   "author": "scilo7",
