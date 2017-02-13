@@ -197,6 +197,7 @@ const DemoModal = {
 
 const DemoNav = {
     view: () => m(bm.Nav, {
+        shadow: true,
         left: [m('img[src="http://bulma.io/images/bulma-logo.png"][alt="Bulma logo"]')],
         center: [m(bm.Icon, {icon: 'github'})],
         right: ['Home', 'Docs']
