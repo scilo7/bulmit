@@ -17,10 +17,10 @@ export const Media = {
 
         vnode.attrs.image ?
             m(MediaLeft, m('p.image', {class: 'is-' + vnode.attrs.image.ratio},
-                m('img', {'src': vnode.attrs.image.src}))) : '',
+                m('img', {'src': vnode.attrs.image.src}))) : null,
 
         m(MediaContent, vnode.children),
 
-        vnode.attrs.button ? m(MediaRight, vnode.attrs.button) : ''
+        vnode.attrs.button ? m(MediaRight, vnode.attrs.button) : null
     ])
 }
