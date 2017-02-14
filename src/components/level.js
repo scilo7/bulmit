@@ -15,6 +15,6 @@ export const LevelRight = {
 
 export const LevelItem = {
     view: (vnode) => m('p.level-item',
-        {class: vnode.attrs.centered ? 'has-text-centered': ''}, vnode.children)
+        {class: vnode.attrs.centered ? 'has-text-centered': null}, vnode.children)
 }
 
