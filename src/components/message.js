@@ -6,7 +6,7 @@ export const Message = {
         vnode.attrs.header ?
             m('.message-header', m('p', vnode.attrs.header),
                 vnode.attrs.onclose ? m('button',
-                    {class: 'delete', onclick: vnode.attrs.onclose}): '')
+                    {class: ['delete'], onclick: vnode.attrs.onclose}): '')
         : '',
         m('.message-body', vnode.children)
     ])

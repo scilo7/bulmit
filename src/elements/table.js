@@ -1,8 +1,8 @@
 import m from "mithril"
-import { collect_boolean } from '../common'
+import { bulmify } from '../common'
 import { Pagination } from '../components/pagination.js'
 
-const STYLES = ['bordered', 'striped', 'narrow']
+const modifiers = ['bordered', 'striped', 'narrow', 'hoverable', 'fullwidth']
 
 const header_col = (vnode, item, idx) => {
     let way = (idx === vnode.state.sort_by) ?
@@ -60,7 +60,7 @@ export const Table = {
     },
 
     view: vnode => [
-        m('table.table', {class: collect_boolean(vnode.attrs, STYLES)},
+        m('table.table', bulmify(vnode.attrs, modifiers),
             vnode.attrs.header ? th_tf(vnode, 'header') : null,
             vnode.attrs.footer ? th_tf(vnode, 'footer') : null,
             m('tbody',

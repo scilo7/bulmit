@@ -5,28 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "build": "rollup -c --config rollup/rollup.config.prod.js",
-    "dev": "rollup -c --watch --config rollup/rollup.config.dev.js",
-    "doc": "rollup -c --watch --config rollup/rollup.config.doc.js",
-    "demo": "rollup -c  --watch --config rollup/rollup.config.demo.js"
+    "build_dev": "webpack --config webpack/dev.js",
+    "build_demo": "webpack --config webpack/demo.js",
+    "start": "webpack-dev-server --config webpack/demo.js --content-base demo/ --open"
   },
   "author": "scilo7",
   "license": "MIT",
   "devDependencies": {
-    "buble": "^0.14.2",
-    "eslint": "^3.15.0",
-    "mocha": "^3.2.0",
-    "rollup": "^0.36.4",
-    "rollup-plugin-buble": "^0.14.0",
-    "rollup-plugin-commonjs": "^5.0.5",
-    "rollup-plugin-livereload": "^0.4.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-scss": "^0.1.0",
-    "rollup-plugin-serve": "^0.1.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup-watch": "^3.2.2"
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.35",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^8.0.0-beta.0",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
-    "mithril": "^1.0.0"
+    "bulma": "^0.6.1",
+    "bulma-calendar": "^0.1.4",
+    "bulma-divider": "^0.1.0",
+    "date-fns": "^1.29.0",
+    "font-awesome": "^4.7.0",
+    "mithril": "^1.1.6"
   }
 }

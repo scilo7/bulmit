@@ -1,11 +1,14 @@
 import m from "mithril"
 
-
-export const Title = {
-    view: (vnode) => m('h' + vnode.attrs.size + '.title' + '.is-' + vnode.attrs.size, vnode.children)
+const tt = (vnode, tag) => {
+    const size = vnode.attrs.size || 1
+    return m('h' + size + tag + '.is-' + size, vnode.attrs.text)
 }
 
+export const Title = {
+    view: (vnode) => tt(vnode, '.title')
+}
 
 export const SubTitle = {
-    view: (vnode) => m('h' + vnode.attrs.size + '.subtitle' + '.is-' + vnode.attrs.size, vnode.children)
+    view: (vnode) => tt(vnode, '.subtitle')
 }
