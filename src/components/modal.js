@@ -1,9 +1,9 @@
 import m from "mithril"
 
 export const Modal = {
-    view: vnode => m('.modal', {class: vnode.attrs.active ? 'is-active': ''}, [
+    view: vnode => m('.modal', {class: vnode.attrs.active ? 'is-active': null}, [
             m('.modal-background'),
             m('.modal-content', vnode.children),
-            vnode.attrs.onclose ? m('.button.modal-close', {onclick: vnode.attrs.onclose}): ''
+            vnode.attrs.onclose ? m('.button.modal-close', {onclick: vnode.attrs.onclose}): null
     ])
 }
